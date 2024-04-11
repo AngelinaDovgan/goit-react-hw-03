@@ -8,10 +8,12 @@ import SearchBox from '../SearchBox/SearchBox';
 import './App.css'
 
 export default function App() {
-  const [list, setList] = useState(initialList);
+  const [list, setList] = useState(() => {
+    const localContacts = JSON.parse(localStorage.getItem("dataContacts"));
+    return localContacts || initialList;
+  })
   const [filter, setFilter] = useState('');
     
-  
 
   useEffect(() => {
     localStorage.setItem("dataContacts", JSON.stringify(list))
