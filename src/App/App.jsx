@@ -8,10 +8,11 @@ import SearchBox from '../SearchBox/SearchBox';
 import './App.css'
 
 export default function App() {
+  
   const [list, setList] = useState(() => {
     const localContacts = JSON.parse(localStorage.getItem("dataContacts"));
     return localContacts || initialList;
-  })
+  });
   const [filter, setFilter] = useState('');
     
 
@@ -32,7 +33,7 @@ export default function App() {
   };
 
   const mainContact = list.filter((val) =>
-    val.name.toLowerCase().includes(filter.toLowerCase()) || val.number.toLowerCase().includes(filter.toLowerCase())
+    val.name.toLowerCase().includes(filter.toLowerCase())
   );
 
 
