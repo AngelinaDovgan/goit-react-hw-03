@@ -1,0 +1,16 @@
+.frm{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.span {
+    font-weight: 700;
+    color: red;
+}

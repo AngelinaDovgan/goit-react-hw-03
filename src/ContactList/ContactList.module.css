@@ -1,0 +1,9 @@
+.mainlist {
+    display: flex;
+    list-style: none;
+}
+
+.listitem {
+    display: flex;
+    border: 1px solid black;
+}
