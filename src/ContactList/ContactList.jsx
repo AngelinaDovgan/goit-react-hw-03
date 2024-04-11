@@ -1,14 +1,14 @@
 import Contact from "../Contact/Contact"
-export default function ContactList({ list }) {
+export default function ContactList({ list, onDelete }) {
     return (
     
         <ul>
             {list.map((item) => (
                         <li key={item.id}>
                         <Contact
-                        data={item} 
+                        data={item}
                         name={item.name}
-                        number={item.number} />
+                        number={item.number} onDelete={onDelete} />
                     </li> ))}
         </ul>
     )

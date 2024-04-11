@@ -1,10 +1,13 @@
 export default function ContactForm({onAdd}) {
     const handleSubmit = e => {
         e.preventDefault();
+        const name = e.target.elements.name.value;
+        const number = e.target.elements.number.value;
         onAdd({
             id: Date.now(),
-            text: e.target.elements.text.value
-        })
+            name: name,
+            number: number
+        });
         e.target.reset();
         
     };
