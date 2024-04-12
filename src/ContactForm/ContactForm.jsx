@@ -6,7 +6,7 @@ import css from './ContactForm.module.css'
 
 const UserSchema = object({
     name: string().min(3, "Type at least 3 characters!").max(50, "Max number of characters is 50!").required("Is required!"),
-    number: number().required("Is required!")
+    number: string().matches((/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/), "Invalid phone number format").required("Is required!")
 })
 export default function ContactForm({ onAdd }) {
 const nameId = useId();
