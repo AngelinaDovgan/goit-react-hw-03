@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import initialList from '../../contacts.json'
+import initialList from '../../../contacts.json'
 
 
 import ContactForm from '../ContactForm/ContactForm';
