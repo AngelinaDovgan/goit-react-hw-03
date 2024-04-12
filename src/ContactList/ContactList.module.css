@@ -1,6 +1,9 @@
 .mainlist {
     display: flex;
-    list-style: none;
+        flex-direction: column;
+        gap: 12px;
+        padding: 8px;
+        list-style: none;
 }
 
 .listitem {
